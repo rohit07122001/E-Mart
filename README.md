@@ -1,11 +1,8 @@
 # E-Mart
-e-Mart will be the portal that will allow its valid members to shop various items from different categories. Non-Members would be able to view items, its details etc. However, one must be a member before making any purchase. Sign-on / Member registration can be done thru the provided link(s) on Home-page.
-Who will be the Users: Any person registered as a member and having either credit card or internet banking a/c
-The site should have following facilities -
-Browse thru various categories (thru top menu buttons)
-Go to specific subcategory (thru expandable links on left panel) Add items in cart
-On check-out final invoice to be displayed with "Modify" facility
-Payment thru Credit-card / internet banking
-On successful payment auto-mail should be sent to customer along with invoice copy.
-
+ The website is a B2C system developed using Spring 6, Maven 3, Spring boot 3, REST API, MySQL 8, JPA,
+ Docker, JWT, Micro Service, Docker, Dot Net Core, Web API Core 8.0, SQL Server, Entity Core, React JS-18 .
+ This e-Commerce application allows its register members to browse & purchase any items through various
+ category. The system is capable to handle various discounts and allows members to shop using loyalty points. The
+ system is totally database driven to make it flexible & easy to maintain. On successful transaction the invoice is
+ emailed in PDF format.
 
