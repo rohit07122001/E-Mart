@@ -1,0 +1,84 @@
+INSERT INTO categories (categoryid, categoryname) VALUES
+(1, 'Electronics'),
+(2, 'Accessories'),
+(3, 'Computers'),
+(4, 'Footwear'),
+(5, 'Home Entertainment');
+
+
+INSERT INTO subcategories (subcategoryid, subcategoryname, categoryid) VALUES
+-- Electronics
+(1, 'Mobiles', 1),
+(2, 'Tablets', 1),
+
+-- Accessories
+(3, 'Headphones & Earbuds', 2),
+(4, 'Smartwatches', 2),
+
+-- Computers
+(5, 'Laptops', 3),
+(6, 'Desktops', 3),
+
+-- Footwear
+(7, 'Running Shoes', 4),
+(8, 'Casual Shoes', 4),
+
+-- Home Entertainment
+(9, 'Televisions', 5),
+(10, 'Soundbars', 5);
+
+
+INSERT INTO products (brand, created_at, description, description_en, description_fr, discount, image, isdeal, price, productname, productname_en, productname_fr, rating, stocks, updated_at, categoryid, subcategoryid)
+VALUES
+('Samsung', NOW(), 'Latest Samsung smartphone with high-end features', 'Latest Samsung smartphone with high-end features', 'Dernier smartphone Samsung avec des fonctionnalités haut de gamme', 10.0, 'samsung_galaxy_s23.jpg', 1, 999.99, 'Samsung Galaxy S23', 'Samsung Galaxy S23', 'Samsung Galaxy S23', 4.7, 50, NOW(), 1, 1),
+
+('Apple', NOW(), 'Newest iPhone with improved camera and battery life', 'Newest iPhone with improved camera and battery life', 'Nouvel iPhone avec appareil photo amélioré et autonomie accrue', 5.0, 'iphone_15.jpg', 1, 1099.99, 'iPhone 15 Pro', 'iPhone 15 Pro', 'iPhone 15 Pro', 4.8, 30, NOW(), 1, 1),
+
+('Sony', NOW(), 'Wireless noise-canceling headphones with deep bass', 'Wireless noise-canceling headphones with deep bass', 'Casque sans fil à réduction de bruit avec des basses profondes', 15.0, 'sony_headphones.jpg', 0, 199.99, 'Sony WH-1000XM4', 'Sony WH-1000XM4', 'Sony WH-1000XM4', 4.6, 70, NOW(), 2, 2),
+
+('Dell', NOW(), 'Powerful laptop with Intel i7 and 16GB RAM', 'Powerful laptop with Intel i7 and 16GB RAM', 'Ordinateur portable puissant avec Intel i7 et 16 Go de RAM', 8.0, 'dell_xps_15.jpg', 0, 1499.99, 'Dell XPS 15', 'Dell XPS 15', 'Dell XPS 15', 4.5, 20, NOW(), 3, 3),
+
+('Nike', NOW(), 'Comfortable and stylish running shoes', 'Comfortable and stylish running shoes', 'Chaussures de course confortables et élégantes', 12.0, 'nike_air_zoom.jpg', 1, 129.99, 'Nike Air Zoom Pegasus', 'Nike Air Zoom Pegasus', 'Nike Air Zoom Pegasus', 4.9, 100, NOW(), 4, 4),
+
+('Adidas', NOW(), 'Lightweight sports shoes with breathable mesh', 'Lightweight sports shoes with breathable mesh', 'Chaussures de sport légères avec maille respirante', 10.0, 'adidas_ultraboost.jpg', 1, 139.99, 'Adidas Ultraboost', 'Adidas Ultraboost', 'Adidas Ultraboost', 4.8, 90, NOW(), 4, 4),
+
+('LG', NOW(), '55-inch 4K OLED Smart TV with Dolby Vision', '55-inch 4K OLED Smart TV with Dolby Vision', 'TV OLED 4K de 55 pouces avec Dolby Vision', 7.0, 'lg_oled_tv.jpg', 0, 1299.99, 'LG OLED55C1', 'LG OLED55C1', 'LG OLED55C1', 4.7, 15, NOW(), 5, 5),
+
+('Samsung', NOW(), 'Smartwatch with fitness tracking and AMOLED display', 'Smartwatch with fitness tracking and AMOLED display', 'Montre intelligente avec suivi de la condition physique et écran AMOLED', 9.0, 'samsung_galaxy_watch.jpg', 1, 249.99, 'Samsung Galaxy Watch 5', 'Samsung Galaxy Watch 5', 'Samsung Galaxy Watch 5', 4.6, 50, NOW(), 2, 6),
+
+('Apple', NOW(), 'Wireless earbuds with active noise cancellation', 'Wireless earbuds with active noise cancellation', 'Écouteurs sans fil avec annulation active du bruit', 5.0, 'airpods_pro.jpg', 1, 199.99, 'AirPods Pro', 'AirPods Pro', 'AirPods Pro', 4.8, 60, NOW(), 2, 2),
+
+('HP', NOW(), 'High-performance gaming laptop with RTX 4070', 'High-performance gaming laptop with RTX 4070', 'Ordinateur portable de jeu haute performance avec RTX 4070', 6.0, 'hp_omen_16.jpg', 0, 1799.99, 'HP Omen 16', 'HP Omen 16', 'HP Omen 16', 4.5, 25, NOW(), 3, 3);
+
+
+
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/61-g46cjguL._AC_UY218_.jpg' WHERE productid = 1;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/61Ony8rgwEL._AC_UY218_.jpg' WHERE productid = 2;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/41lArSiD5hL._AC_UY218_.jpg' WHERE productid = 3;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/61-Y-eWXqtL._AC_UY218_.jpg' WHERE productid = 4;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/81JE+jwSnnL._AC_UL320_.jpg' WHERE productid = 5;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/61GDcnde0ML._AC_UL320_.jpg' WHERE productid = 6;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/71PJN1eWvFL._AC_UY218_.jpg' WHERE productid = 7;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/71T0bZCZgoL._AC_UY218_.jpg' WHERE productid = 8;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/61oCISLE+PL._AC_UY218_.jpg' WHERE productid = 9;
+UPDATE products SET image = 'https://m.media-amazon.com/images/I/71VSVzgfK4L._AC_UY218_.jpg' WHERE productid = 10;
+
+
+
+
+
+INSERT INTO products (brand, created_at, description, description_en, description_fr, discount, image, isdeal, price, productname, productname_en, productname_fr, rating, stocks, updated_at, categoryid, subcategoryid)
+VALUES
+('LG', NOW(), 'Smart inverter double-door refrigerator', 'Smart inverter double-door refrigerator', 'Réfrigérateur à double porte à onduleur intelligent', 8.0, 'lg_fridge.jpg', 0, 8999.99, 'LG Refrigerator', 'LG Refrigerator', 'LG Refrigerator', 4.7, 20, NOW(), 3, 3),
+
+('Levi\'s', NOW(), 'Slim fit denim jeans', 'Slim fit denim jeans', 'Jean en denim ajusté', 10.0, 'levis_jeans.jpg', 1, 590.99, 'Levi\'s Jeans', 'Levi\'s Jeans', 'Levi\'s Jeans', 4.6, 100, NOW(), 4, 4);
+
+
+
+UPDATE products 
+SET image = 'https://m.media-amazon.com/images/I/71Q46li47mL._AC_UY218_.jpg' 
+WHERE productid = 17;
+
+UPDATE products 
+SET image = 'https://m.media-amazon.com/images/I/51lq9bjuDLL._AC_UL320_.jpg' 
+WHERE productid = 18;
